@@ -1,0 +1,29 @@
+server:
+  port: 9011
+
+# debug: true
+
+spring:
+  profiles:
+    include:
+      - private
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  flyway:
+    enabled: true
+
+mybatis-plus:
+  mapper-locations:
+    - "classpath:cn/archliu/homekit/domain/*/mapper/xml/*.xml"
+  #mybatis-plus配置控制台打印完整带参数SQL语句
+  # configuration:
+  #   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+archliu:
+  common:
+    # 打印请求 url 和请求耗时
+    api-log: true
+    cors-properties:
+      # 服务端开启跨域
+      cors-origin: true

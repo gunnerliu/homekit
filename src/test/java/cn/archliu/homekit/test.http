@@ -1,0 +1,12 @@
+###
+GET http://127.0.0.1:9011/api/hk/iots/heartBeat?iotCode=testCde&ipAddr=172.31.239.1 HTTP/1.1
+
+
+### 
+GET http://127.0.0.1:9011/api/hk/iots/allIots HTTP/1.1
+
+
+
+
+### 
+GET http://127.0.0.1:9011/api/hk/aligen/test HTTP/1.1
