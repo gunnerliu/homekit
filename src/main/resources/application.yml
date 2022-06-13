@@ -27,3 +27,13 @@ archliu:
     cors-properties:
       # 服务端开启跨域
       cors-origin: true
+
+horus:
+  client:
+    horus-host: http://127.0.0.1:9013
+    app-name: homkit
+    access-party: archliu-homkit
+    monitor-api-log: false
+    monitor-api: false
+    monitor-logback: false
+    monitor-app: false

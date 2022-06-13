@@ -3,6 +3,7 @@ package cn.archliu.homekit.domain.iots.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
+import cn.archliu.homekit.common.enums.SwitchValue;
 import cn.archliu.homekit.domain.iots.entity.HkIots;
 
 /**
@@ -29,5 +30,21 @@ public interface IotService {
      * @return
      */
     IPage<HkIots> allIots(Page<HkIots> page);
+
+    /**
+     * 反转灯的开关
+     * 
+     * @param iotCode
+     */
+    void reverseLight(String iotCode);
+
+
+    /**
+     * 控制开关
+     * 
+     * @param iotCode
+     * @param switchValue
+     */
+    void switchLight(String iotCode, SwitchValue switchValue);
 
 }

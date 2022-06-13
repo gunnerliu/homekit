@@ -49,4 +49,11 @@ public class IotsWeb {
         return ComRes.success();
     }
 
+    @ApiOperation("反转灯的开关")
+    @GetMapping("/switchLight")
+    public ComRes<ResData<Void>> switchLight(@RequestParam("iotCode") String iotCode) {
+        iotService.reverseLight(iotCode);
+        return ComRes.success();
+    }
+
 }
